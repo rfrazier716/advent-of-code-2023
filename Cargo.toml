@@ -2,4 +2,5 @@
 
 members = [
     #plop-members-prefix
+	"rust/day_01",
 ]

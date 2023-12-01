@@ -2,6 +2,7 @@
   "name": "advent-of-code-2023",
   "version": "1.0.0",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "plop": "^4.0.0"
   }
 }
