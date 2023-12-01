@@ -1,0 +1,5 @@
+[workspace]
+
+members = [
+    #plop-members-prefix
+]

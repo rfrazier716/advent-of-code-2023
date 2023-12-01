@@ -1,0 +1,7 @@
+{
+  "name": "advent-of-code-2023",
+  "version": "1.0.0",
+  "dependencies": {
+    "plop": "^4.0.0"
+  }
+}
