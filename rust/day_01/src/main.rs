@@ -5,9 +5,7 @@ fn part_one(input: &str) -> u32 {
         .lines()
         .map(|line| {
             let nums: Vec<_> = line
-                .chars()
-                .filter(|x| x.is_ascii_digit())
-                .map(|x| x.to_digit(10).unwrap()).collect();
+                .chars().filter_map(|x| x.to_digit(10)).collect();
             nums[0] * 10 + nums.last().unwrap()
         })
         .sum()
@@ -19,9 +17,9 @@ fn extract_first_and_last(input: &str) -> (u32, u32) {
     let chars: Vec<_> = input.chars().collect();
     let mut tail = 0;
     for head in 0..input.len() {
-        if chars[head].is_ascii_digit() {
+        if let Some(val) = chars[head].to_digit(10){
             // if it's a digit push and reset the tail
-            nums.push(chars[head].to_digit(10).unwrap());
+            nums.push(val);
             tail = head
         } else {
             for trailing in tail..head {
