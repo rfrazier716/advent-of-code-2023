@@ -2,6 +2,6 @@
 
 members = [
     #plop-members-prefix
+	"rust/day_02",
 	"rust/day_01",
-    "rust/leaderboard_merge",
 ]

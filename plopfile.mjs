@@ -3,7 +3,7 @@ import path from "path";
 
 const getInput = async ({ year, day, session }) => {
   const resp = await fetch(
-    `https://www.adventofcode.com/${year}/day/${day.padStart(2, "0")}/input`,
+    `https://www.adventofcode.com/${year}/day/${day}/input`,
     {
       method: "GET",
       headers: { session: session },
@@ -24,6 +24,7 @@ export default function (plop) {
     ],
 
     actions: (data) => {
+      data.day_raw = Number(data.day); // the raw day with zero padding
       data.day = data.day.padStart(2, "0");
       const actions = [];
       const env = dotenv.config({
@@ -53,7 +54,7 @@ export default function (plop) {
           template: '\t"rust/day_{{day}}",',
         },
         () =>
-          `Find Today's Puzzle at https://adventofcode.com/${env.year}/day/${data.day}`
+          `Find Today's Puzzle at https://adventofcode.com/${env.year}/day/${data.day_raw}`
       );
       return actions;
     },
