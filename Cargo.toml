@@ -3,4 +3,5 @@
 members = [
     #plop-members-prefix
 	"rust/day_01",
+    "rust/leaderboard_merge",
 ]

@@ -36,10 +36,9 @@ fn extract_first_and_last(input: &str) -> (u32, u32) {
                     _ => None,
                 } {
                     nums.push(val);
-                    tail = head
                 } else if head - tail >= 4 {
                     // largest number of characters is 5
-                    // since our serch includes the head its' > 4
+                    // since our search includes the head its' > 4
                     tail +=1
                 }
             }
