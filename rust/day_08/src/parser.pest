@@ -1,0 +1,9 @@
+WHITESPACE = _{" "}
+direction = {("L" | "R")}
+steps = @{ direction + }
+node = {ASCII_ALPHANUMERIC{3}}
+wrappedNode = {"("~node~")"}
+paths = _{"(" ~ node ~ "," ~ node~")"}
+mapEntry = {node ~ "=" ~ paths}
+
+input = {SOI ~ steps ~ NEWLINE+ ~ (mapEntry~NEWLINE)+ ~ EOI}
