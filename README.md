@@ -11,7 +11,7 @@
     Solutions to 2023's <a href="https://adventofcode.com">Advent of Code</a> challenges, written in Rust... and whichever other language I feel like exploring.
   </p>
   <p align="center">
- ⭐⭐⭐⭐★ ★★⭐★★ ★★★★★ ★★★★★ ★★★★★
+ ⭐⭐⭐⭐★ ⭐★⭐★★ ★★★★★ ★★★★★ ★★★★★
   </p>
 </div>
 
