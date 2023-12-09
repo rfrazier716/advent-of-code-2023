@@ -2,6 +2,8 @@
 
 members = [
     #plop-members-prefix
+	"rust/day_07",
+	"rust/day_05",
 	"rust/day_04",
 	"rust/day_03",
 	"rust/day_02",

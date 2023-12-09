@@ -1,0 +1,10 @@
+WHITESPACE    = _{ " " }
+lf            = _{NEWLINE}
+number        =  @{ ASCII_DIGIT+ }
+field         =  { "seed" | "soil" | "fertilizer" | "water" | "light" | "temperature" | "humidity" | "location" }
+mappingHeader =  { field ~ "-to-" ~ field ~ "map:" }
+mappingRow    =  { number ~ number ~ number }
+mapping = {mappingHeader ~lf~ (mappingRow~lf)+}
+seeds         =  { "seeds:" ~ number+}
+
+input = {SOI ~ seeds ~ NEWLINE+ ~ (mapping ~NEWLINE*)+ ~ EOI}
